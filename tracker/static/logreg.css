@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+
+* {
+  margin: 0 auto;
+  background-color: #f7f9fb;
+}
+
+header {
+  border-bottom: 8px solid #eadde1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+#logo {
+  flex: 1;
+}
+
+#logo h1 {
+  font-family: "Righteous", cursive;
+  font-size: 40px;
+  margin-bottom: -8px;
+}
+
+#logo p {
+  font-family: "Sen", sans-serif;
+  font-size: 0.7em;
+  margin-left: 2em;
+}
+
+header button {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #eadde1;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+}
