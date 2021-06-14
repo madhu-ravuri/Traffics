@@ -15,27 +15,30 @@
         <h1>traffics</h1>
         <p>write track create</p>
       </div>
-      <a href="/register"><button>Register</button></a>
+      <a href="/register"><button>register</button></a>
     </header>
-    {% if messages %}
-    <ul class="messages">
-      {% for message in messages %}
-      <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-        {{ message }}
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %} {% if is_logged_in %}
+    {% if is_logged_in %}
     <div>logged in user: {{ person.username }}</div>
     {% endif %}
-    <div id="container">
-      <div id="login-form">
-        <h1>Log In</h1>
+    <div id="msgs">
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+          {{ message }}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <div class="container">
+      <div class="user-form">
+        <h1>welcome back!</h1>
         <form action="/login" method="POST">
           {% csrf_token %}
-          <label>Username</label> <input type="text" name="username" />
-          <label>Password</label> <input type="password" name="password" />
-          <button>Log In</button>
+          <input placeholder="username" type="text" name="username" />
+          <input placeholder="password" type="text" name="password" />
+          <button>log in</button>
         </form>
       </div>
       <p>users:</p>

@@ -5,6 +5,7 @@
 * {
   margin: 0 auto;
   background-color: #f7f9fb;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 header {
@@ -13,6 +14,10 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 10px 40px;
+}
+
+button:hover {
+  background-color: #ffe3e0;
 }
 
 #logo {
@@ -32,9 +37,76 @@ header {
 }
 
 header button {
-  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
   background-color: #eadde1;
   border: none;
   padding: 12px;
   border-radius: 5px;
+}
+
+/* login/reg forms */
+.container {
+  margin-top: 30px;
+  align-content: center;
+}
+
+#msgs {
+  font-family: "Cronos Pro";
+  color: tomato;
+  width: 40%;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+#msgs ul {
+  border: 0.1em solid tomato;
+  border-radius: 2px;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 50%;
+}
+
+.user-form h1 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+input {
+  border: 1px solid #aeb4a9;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin: 10px;
+  padding: 6px 10px;
+}
+
+input[placeholder="username"],
+input[placeholder="password"] {
+  text-align: center;
+  font-weight: bold;
+}
+
+.user-form button {
+  margin-top: 5px;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #eadde1;
+  border: none;
+  padding: 9px 25px 7px;
+  border-radius: 5px;
+}
+.user-form button:hover {
+  background-color: #ffe3e0;
 }
