@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 
-* {
-  /* margin: 0 auto; */
+body {
   background-color: #f7f9fb;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -42,15 +41,22 @@
   background-color: #ffe3e0 !important;
 }
 
-.btn:active {
+.btn-header:active {
   box-shadow: none !important;
+  background-color: #ffe3e0 !important;
 }
 
 /* login/reg forms */
-/* .container {
-  margin-top: 30px;
-  align-content: center;
+
+input .btn-log {
+  font-weight: bold;
+  background-color: #eadde1;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
 }
+
+/*
 
 #msgs {
   font-family: "Cronos Pro";
