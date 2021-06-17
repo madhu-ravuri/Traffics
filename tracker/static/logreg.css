@@ -51,6 +51,12 @@ input .btn-log {
   padding: 20px;
 }
 
+.close {
+  border: none;
+  border-radius: 20px;
+  background-color: #eadde1;
+}
+
 /*
 
 #msgs {

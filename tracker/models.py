@@ -42,7 +42,7 @@ class UserManager(models.Manager):
 
 
 class Users(models.Model):
-    username = models.CharField(max_length=80, unique=True)
+    username = models.CharField(max_length=80)
     password = models.CharField(max_length=80)
     objects = UserManager()
 

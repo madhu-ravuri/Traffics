@@ -25,12 +25,13 @@ def register_user(request):
     username_scan = Users.objects.filter(username=potential)
     if len(username_scan) > 0:
         messages.error(request, "Username is already taken.")
+        return redirect("/")
 
     if len(errors) > 0:
         for key, value in errors.items():
             messages.error(request, value)
 
-        return redirect("/register")
+        return redirect("/")
 
     else:
         hashed_pw = bcrypt.hashpw(
@@ -38,16 +39,17 @@ def register_user(request):
             bcrypt.gensalt()
         ).decode()
 
-    newUser = Users.objects.create(
-        username=request.POST['username'],
-        password=hashed_pw
-    )
+        newUser = Users.objects.create(
+            username=request.POST['username'],
+            password=hashed_pw
+        )
+        # add user id to session
+        print("register success")
+        request.session['user_id'] = newUser.id
+        return redirect('/dashboard')
+
     # if using user w/ email:
     # email = request.POST['email'],
-
-    # add user id to session
-    request.session['user_id'] = newUser.id
-    return redirect('/')
 
 
 def login_user(request):
@@ -82,6 +84,10 @@ def user_home(request):
         is_logged_in = True
     except:
         is_logged_in = False
+
+    if not is_logged_in:
+        print("redirected to main")
+        redirect('/')
 
     context = {
         "is_logged_in": is_logged_in,
