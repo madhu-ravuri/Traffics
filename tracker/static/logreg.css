@@ -7,11 +7,6 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-/* header {
-  border-bottom: 8px solid #eadde1;
-  align-items: center;
-} */
-
 .header-container {
   border-bottom: 4px solid #eadde1;
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.1);
