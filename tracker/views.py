@@ -93,4 +93,10 @@ def user_home(request):
         "is_logged_in": is_logged_in,
         "person": Users.objects.get(id=request.session['user_id']),
     }
-    return render(request, 'index.html', context)
+    return render(request, 'dashboard.html', context)
+
+
+def logout(request):
+    request.session.clear()
+    print("logged out user")
+    return redirect('/')

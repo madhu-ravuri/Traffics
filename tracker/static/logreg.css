@@ -32,18 +32,14 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
-.btn-header:hover {
-  background-color: #ffe3e0 !important;
-}
-
-.btn-header:active {
-  box-shadow: none !important;
+.btn-header:hover,
+.btn-log:hover {
   background-color: #ffe3e0 !important;
 }
 
 /* login/reg forms */
 
-input .btn-log {
+.btn-log {
   font-weight: bold;
   background-color: #eadde1;
   border: none;
