@@ -1,1 +1,19 @@
-<html></html>
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'logreg.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid p-0 header-container">
+      <header
+        class="d-flex justify-content-between align-items-center px-4 mt-2"
+      >
+        <div id="logo">
+          <h1>traffics</h1>
+          <p>write track create</p>
+        </div>
+        <a href="/logout" class="btn btn-header shadow-none">log out</a>
+      </header>
+    </div>
+  </body>
+</html>
