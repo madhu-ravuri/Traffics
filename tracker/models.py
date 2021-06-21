@@ -2,7 +2,6 @@ from django.db import models
 import re
 
 from django.db.models.fields import CharField
-from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 # class UserManager(models.Manager):
@@ -50,7 +49,6 @@ class Users(models.Model):
 
 class Projects(models.Model):
     title = models.TextField(max_length=255, default="wip")
-    word_count = ArrayField(models.CharField(max_length=500), blank=True)
     word_count = models.IntegerField(default=0)
     deadline = models.DateTimeField(null=True, blank=True)
     desc = models.TextField(blank=True)
