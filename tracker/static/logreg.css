@@ -12,9 +12,9 @@ body {
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
-.sticky-top {
+/* .sticky-top {
   background-color: rgba(0, 0, 0, 0.7) !important;
-}
+} */
 
 #logo h1 {
   font-family: "Righteous", cursive;
