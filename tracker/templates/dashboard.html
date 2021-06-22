@@ -30,9 +30,9 @@
     <p>{{ person.username }}</p>
     {% endif %}
     <div class="d-flex align-items-center m-4">
-      <div class="col-10 offset-1 border border-2">
+      <div class="col-8 offset-2 border border-2 p-2">
         <div class="row">
-          <div class="col-3">
+          <div class="col-sm-4">
             <div class="card">
               <img
                 src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png"
@@ -48,7 +48,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-sm-4">
             <div class="card">
               <img
                 src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png"
@@ -64,7 +64,23 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-sm-4">
+            <div class="card">
+              <img
+                src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
             <div class="card">
               <img
                 src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png"
@@ -81,6 +97,32 @@
             </div>
           </div>
         </div>
+        <form action="/create" method="POST">
+          {% csrf_token %}
+          <div class="form-floating p-2">
+            <input
+              type="text"
+              class="form-control"
+              name="title"
+              placeholder="title"
+              id="floatingTitle"
+              aria-describedby="titleHelpBlock"
+            />
+            <label for="floatingTitle">title</label>
+            <span id="titleHelpBlock" class="form-text">
+              untitled projects will default to 'wip###'
+            </span>
+          </div>
+          <div class="form-floating p-2">
+            <input
+              type="number"
+              class="form-control"
+              name="wordcount"
+              placeholder="word count"
+              id="floatingCount"
+            />
+          </div>
+        </form>
       </div>
     </div>
 

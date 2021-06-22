@@ -100,3 +100,14 @@ def logout(request):
     request.session.clear()
     print("logged out user")
     return redirect('/')
+
+
+def new_project(request):
+    project = Projects.objects.create(
+        title=request.POST['title'],
+        word_count=request.POST['wordcount'],
+        deadline=request.POST['deadline'],
+        desc=request.POST['desc'],
+        writer=Users.objects.get(id=request.session["user_id"])
+    )
+    return redirect(f"/project/{project.id}")

@@ -18,7 +18,7 @@ body {
 
 #logo h1 {
   font-family: "Righteous", cursive;
-  text-shadow: 2px 2px #dbe2e9;
+  text-shadow: 2px 2px #b6ccfe;
   font-size: 40px;
   margin-bottom: -8px;
 }
@@ -35,7 +35,7 @@ body {
   background-color: #84828f;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 9px;
   border-radius: 5px;
 }
 .btn-header:hover,
@@ -51,7 +51,7 @@ body {
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 7px 14px;
 }
 
 .close {
