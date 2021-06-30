@@ -111,3 +111,10 @@ def new_project(request):
         writer=Users.objects.get(id=request.session["user_id"])
     )
     return redirect(f"/project/{project.id}")
+
+
+def view_project(request, projID):
+    context = {
+        'project': Projects.objects.get(id=projID),
+    }
+    return render(request, "proj_view.html", context)

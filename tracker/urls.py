@@ -8,4 +8,6 @@ urlpatterns = [
     path('login', views.login_user),
     path('dashboard', views.user_home),
     path('logout', views.logout),
+    path('create', views.new_project),
+    path('project/<int:projID>', views.view_project),
 ]
