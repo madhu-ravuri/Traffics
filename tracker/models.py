@@ -49,7 +49,7 @@ class Users(models.Model):
 
 class Projects(models.Model):
     title = models.TextField(max_length=255, default="wip")
-    word_count = models.IntegerField(default=0)
+    words = models.IntegerField(default=0)
     deadline = models.DateTimeField(null=True, blank=True)
     desc = models.TextField(blank=True)
 

@@ -7,9 +7,9 @@
     <title>Document</title>
   </head>
   <body>
-    {{ project.title }} made by {{ project.writer.username }} with {{
-    project.word_count }} words
+    {{ project.title }} made by {{ project.writer.username }} with
+    {{project.words }} words
     <p>{{ project.desc }}</p>
-    {{ project.deadline }}
+    {{ project.deadline|date:"M d, Y" }}
   </body>
 </html>

@@ -105,7 +105,7 @@ def logout(request):
 def new_project(request):
     project = Projects.objects.create(
         title=request.POST['title'],
-        word_count=request.POST['wordcount'],
+        words=request.POST['wordcount'],
         deadline=request.POST['deadline'],
         desc=request.POST['desc'],
         writer=Users.objects.get(id=request.session["user_id"])
